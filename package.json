@@ -1,0 +1,12 @@
+{
+  "name": "digital-product-ecosystem",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multi-product digital ecosystem featuring FaunaCare, Apex Digital Academy, and FounderForge Studio",
+  "scripts": {
+    "build": "npm --prefix frontend run build",
+    "dev": "npm --prefix frontend run dev",
+    "preview": "npm --prefix frontend run preview"
+  }
+}
+

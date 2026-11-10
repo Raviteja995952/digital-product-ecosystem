@@ -1,0 +1,538 @@
+/* ==========================================================================
+   GLOBAL CSS RESET & DESIGN FOUNDATION
+   Zero Tailwind CSS | Pure Handcrafted Semantic CSS
+   Agency-Grade Typography, Spacing, and Responsive Grid Architecture
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #18181B;
+  background-color: #FFFFFF;
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+::selection {
+  background: rgba(27, 56, 43, 0.18);
+  color: #12271E;
+}
+
+/* Subtle Ecosystem Portal Link in Footers */
+.ecosystem-portal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0.85;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ecosystem-portal-link:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   BACK-TO-ECOSYSTEM HEADER PILL (Subtle across all 3 independent apps)
+   ========================================================================== */
+.back-to-ecosystem-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.04);
+  color: #4B5563;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  letter-spacing: 0.01em;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.back-to-ecosystem-pill:hover {
+  background: rgba(0, 0, 0, 0.08);
+  color: #111827;
+  border-color: rgba(0, 0, 0, 0.15);
+  transform: translateX(-1px);
+}
+
+/* Animals specific override for seamless harmony with ivory header */
+.animals-header .back-to-ecosystem-pill {
+  background: rgba(27, 56, 43, 0.06);
+  color: #1B382B;
+  border-color: rgba(27, 56, 43, 0.12);
+}
+
+.animals-header .back-to-ecosystem-pill:hover {
+  background: rgba(27, 56, 43, 0.12);
+  color: #12271E;
+}
+
+/* Academy specific override */
+.academy-header .back-to-ecosystem-pill {
+  background: rgba(15, 23, 42, 0.05);
+  color: #1E293B;
+  border-color: rgba(15, 23, 42, 0.1);
+}
+
+.academy-header .back-to-ecosystem-pill:hover {
+  background: rgba(15, 23, 42, 0.1);
+  color: #0F172A;
+}
+
+/* Studio specific override */
+.studio-top-bar .back-to-ecosystem-pill {
+  background: #F1F5F9;
+  color: #475569;
+  border-color: #CBD5E1;
+  padding: 0.3rem 0.65rem;
+  margin-right: 0.5rem;
+}
+
+.studio-top-bar .back-to-ecosystem-pill:hover {
+  background: #E2E8F0;
+  color: #0F172A;
+}
+
+/* ==========================================================================
+   ECOSYSTEM OVERVIEW HUB (Route: /)
+   Agency Editorial Hub Architecture
+   ========================================================================== */
+.ecosystem-hub-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #FAFAFA;
+  color: #0F172A;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Top Navigation Bar */
+.ecosystem-hub-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #E5E7EB;
+  padding: 0 1.5rem;
+}
+
+.ecosystem-nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.ecosystem-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.ecosystem-hub-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  background: #0F172A;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: -0.02em;
+}
+
+.ecosystem-hub-brand-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+}
+
+.ecosystem-hub-brand-text span {
+  font-size: 0.725rem;
+  font-weight: 500;
+  color: #64748B;
+  letter-spacing: 0.02em;
+}
+
+/* Persistent Application Switcher Nav */
+.ecosystem-top-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #F1F5F9;
+  padding: 0.3rem;
+  border-radius: 999px;
+  border: 1px solid #E2E8F0;
+}
+
+.ecosystem-nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: #64748B;
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+.ecosystem-nav-pill:hover {
+  color: #0F172A;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.ecosystem-nav-pill.active {
+  background: #FFFFFF;
+  color: #0F172A;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.app-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.app-dot.animals { background: #1B382B; }
+.app-dot.academy { background: #1E3A8A; }
+.app-dot.studio { background: #4F46E5; }
+
+.ecosystem-live-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #ECFDF5;
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+/* Hub Body & Content */
+.ecosystem-hub-body {
+  flex: 1;
+  padding: 3.5rem 1.5rem 5rem;
+}
+
+.hub-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.hub-hero-intro {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 3.5rem;
+}
+
+.hub-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  background: #EEF2F6;
+  color: #334155;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.25rem;
+}
+
+.hub-hero-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 600;
+  color: #0F172A;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.15rem;
+}
+
+.hub-hero-desc {
+  font-size: 1.05rem;
+  color: #64748B;
+  line-height: 1.65;
+}
+
+/* Hub Products Cards Grid */
+.hub-products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.hub-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid #E2E8F0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+
+.hub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.08), 0 8px 16px -6px rgba(0, 0, 0, 0.04);
+  border-color: #CBD5E1;
+}
+
+.hub-card-media {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.hub-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.hub-card:hover .hub-card-media img {
+  transform: scale(1.04);
+}
+
+.hub-media-overlay {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.hub-tag {
+  font-size: 0.725rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(15, 23, 42, 0.85);
+  color: #FFFFFF;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  backdrop-filter: blur(6px);
+}
+
+.hub-card-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.hub-category-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.65rem;
+}
+
+.hub-category-label.animals { color: #1B382B; }
+.hub-category-label.academy { color: #1E3A8A; }
+.hub-category-label.studio { color: #4F46E5; }
+
+.hub-product-name {
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0F172A;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.hub-product-summary {
+  font-size: 0.9rem;
+  color: #64748B;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hub-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #F1F5F9;
+}
+
+.hub-features-list span {
+  font-size: 0.825rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+.hub-card-foot {
+  padding-top: 1rem;
+}
+
+/* ==========================================================================
+   UNIFIED HUB PRIMARY CTA BUTTONS
+   Identical dark navy styling (#111827) across all three products
+   ========================================================================== */
+.btn-hub-launch,
+.btn-hub-launch.animals,
+.btn-hub-launch.academy,
+.btn-hub-launch.studio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 48px;
+  padding: 0.85rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: #111827;
+  color: #FFFFFF;
+  border: 1px solid #111827;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-hub-launch:hover,
+.btn-hub-launch.animals:hover,
+.btn-hub-launch.academy:hover,
+.btn-hub-launch.studio:hover {
+  background-color: #1F2937;
+  border-color: #1F2937;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(17, 24, 39, 0.16);
+}
+
+.btn-hub-launch:active,
+.btn-hub-launch.animals:active,
+.btn-hub-launch.academy:active,
+.btn-hub-launch.studio:active {
+  transform: translateY(0);
+  background-color: #030712;
+  border-color: #030712;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-hub-launch svg {
+  color: #FFFFFF;
+  stroke: #FFFFFF;
+  transition: transform 0.2s ease;
+}
+
+.btn-hub-launch:hover svg {
+  transform: translateX(3px);
+}
+
+/* Hub Footer */
+.ecosystem-hub-footer {
+  border-top: 1px solid #E2E8F0;
+  background: #FFFFFF;
+  padding: 1.75rem 1.5rem;
+}
+
+.hub-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.825rem;
+  color: #64748B;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hub-footer-inner code {
+  background: #F1F5F9;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  color: #0F172A;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hub-products-grid {
+    grid-template-columns: 1fr;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .ecosystem-top-nav-links {
+    display: none;
+  }
+  .ecosystem-nav-inner {
+    height: 60px;
+  }
+  .hub-hero-intro {
+    margin-bottom: 2.5rem;
+  }
+}
